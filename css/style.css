@@ -6,9 +6,10 @@
 body{
     font-family:monospace;
     min-height: 100vh;
+    width: 100vw;
 }
 .container{
-    width: 1125px;
+    width: 100%;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -37,7 +38,7 @@ input{
     border: none;
     padding:10px;
     font-size: 16px;
-    min-width: 400px;
+    min-width: 90%;
     outline: none;
 }
 button#search{
@@ -60,4 +61,20 @@ section.data p.def{
     font-size: 20px;
     color: #2d3748;
     line-height: 1.6;
+}
+.not-found{
+  width: 80%;
+  margin: 0 auto;
+  
+}
+
+.suggested{
+  background: grey;
+  color: white;
+  padding: 5px 10px;
+  margin-right: 3px;
+  border-radius: 4px;
+  margin-top: 5px;
+  display:inline-block;
+
 }
