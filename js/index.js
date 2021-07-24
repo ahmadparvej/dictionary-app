@@ -1,9 +1,11 @@
 let input = document.querySelector('#input');
 let notFound = document.querySelector('.not-found');
 let def = document.querySelector('.def');
+
 let audioBox = document.querySelector('.audio');
 let searchBtn = document.querySelector('#search');
 let loading = document.querySelector('.loading');
+
 let apiKey='81855746-c3fa-4ac2-9280-d8f5595e57ae';
 
 
@@ -30,17 +32,19 @@ async function getData(word) {
     loading.style.display = 'block'
 
   // Ajax call
-    const response= await fetch(`https://www.dictionaryapi.com/api/v3/references/learners/json/${word} ?key=${apiKey}`)
+    const response= await fetch(`https://www.dictionaryapi.com/api/v3/references/learners/json/${word}?key=${apiKey}`)
     const data = await response.json();
     console.log(data);
     // if not found
     if (!data.length) {
       loading.style.display = 'none'
+
       notFound.innerText='No result found';
       return;
     }
     // if suggested 
     if (typeof data[0] ==='string') {
+
       loading.style.display = 'none'
       let heading = document.createElement('h3');
       heading.innerHTML='Did you mean?'
