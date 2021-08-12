@@ -23,6 +23,7 @@ nav{
 }
 section.input{
     padding-top: 100px;
+    margin: 0 auto;
 }
 h2{
     text-align: center;
@@ -30,8 +31,6 @@ h2{
 }
 .form_wrap{
     display: flex;
-    justify-content: center;
-    margin:0 auto;
 }
 .input_wrap{
     display: flex;
@@ -43,8 +42,7 @@ input{
     border: none;
     padding:10px;
     font-size: 16px;
-    min-width: 80%;
-    min-width: 90%;
+    min-width: 60%;
     outline: none;
 }
 button#search{
